@@ -18,7 +18,7 @@ const config = {
 async function main() {
   await hardhat.run("compile");
 
-  const Vault = await ethers.getContractFactory("BeefyVaultV5");
+  const Vault = await ethers.getContractFactory("BeefyVaultV6");
   const Strategy = await ethers.getContractFactory("StrategyBunnyCake");
 
   const [deployer] = await ethers.getSigners();
