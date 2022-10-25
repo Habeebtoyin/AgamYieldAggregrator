@@ -4,28 +4,27 @@ import { addressBook } from "blockchain-addressbook";
 
 const ethers = hardhat.ethers;
 
-const {
-  platforms: { stella, beefyfinance },
-  tokens: {
-    USDC: { address: USDC },
-    GLMR: { address: GLMR },
-    BIFI: { address: BIFI }
-  },
-} = addressBook.cronos;
+// //const {
+//  // platforms: { stella, beefyfinance },
+//   //tokens: {
+//     USDC: { address: USDC },
+//     BIFI: { address: BIFI }
+//   },
+// } = addressBook.cronos;
 
 const addressZero = ethers.constants.AddressZero,
 
 const config = {
-  treasury: beefyfinance.treasuryMultisig,
-  rewardPool: beefyfinance.rewardPool,
-  unirouter: vvs.router,
-  bifi: BIFI,
-  wNative: CRO,
-  stable: USDC,
-  bifiRoute: [CRO, BIFI],
-  stableRoute: [CRO, USDC],
+  treasury: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
+  rewardPool: "0x79a1847677B2c14311B9d3708C0483B6DF521f60",
+  unirouter: "0xE396407e21F7d7526ff0b0a8912751C64957fBF7",
+  bifi: "0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A",
+  wNative: "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710",
+  stable: "0xDe14b85cf78F2ADd2E867FEE40575437D5f10c06",
+  bifiRoute: ["0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710", "0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A"],
+  stableRoute: ["0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710", "0xDe14b85cf78F2ADd2E867FEE40575437D5f10c06"],
   splitTreasury: false,
-  treasuryFee: 640
+  treasuryFee: 6400
 };
 
 async function main() {

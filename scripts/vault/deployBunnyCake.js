@@ -7,12 +7,12 @@ const { getNetworkRpc } = require("../utils/getNetworkRpc");
 const ethers = hardhat.ethers;
 
 const config = {
-  want: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+  want: "",
   mooName: "Moo Bunny Cake",
   mooSymbol: "mooBunnyCake",
   delay: 21600,
-  keeper: "0x9295E05d5cd1cfA617875Ba1cF984D65830d1a4c",
-  strategist: "0xB60d9512CC129f539313b7Bdbd13bBa1Fd2fE3C3",
+  keeper: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
+  strategist: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
 };
 
 async function main() {

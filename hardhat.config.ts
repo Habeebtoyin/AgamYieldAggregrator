@@ -30,8 +30,10 @@ const config: DeploymentConfig = {
     },
     bitgert: {
       url: process.env.BITGERT_RPC || "https://serverrpc.com",
-      chainId: 56,
-      accounts,
+      chainId: 32520,
+      gasPrice: 20000000000,
+      gas: 1000000,
+      accounts
     },
     heco: {
       url: process.env.HECO_RPC || "https://http-mainnet-node.huobichain.com",

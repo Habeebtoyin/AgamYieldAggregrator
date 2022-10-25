@@ -19,7 +19,7 @@ const {
 
 const shouldVerifyOnEtherscan = false;
 
-const want = web3.utils.toChecksumAddress("0xe68D05418A8d7969D9CA6761ad46F449629d928c");
+const want = web3.utils.toChecksumAddress("0x6DbE46854723c439c8a5Dc8D6d08e7df685Dcd9d");
 const ensId = ethers.utils.formatBytes32String("cake.eth");
 
 const vaultParams = {
@@ -30,16 +30,16 @@ const vaultParams = {
 
 const strategyParams = {
   want: want,
-  poolId: 116,
-  chef: pancake.masterchefV2,
-  unirouter: pancake.router,
-  strategist: process.env.STRATEGIST_ADDRESS,
-  keeper: beefyfinance.keeper,
-  beefyFeeRecipient: beefyfinance.beefyFeeRecipient,
-  beefyFeeConfig: beefyfinance.beefyFeeConfig,
-  outputToNativeRoute: [CAKE, WBNB],
-  outputToLp0Route: [CAKE, BUSD, WOM],
-  outputToLp1Route: [CAKE, BUSD],
+  poolId: 0,
+  chef:"0x4013c82F6cD1E4D3F3428f5B685Bb301c9dF540d",
+  unirouter: "0xE396407e21F7d7526ff0b0a8912751C64957fBF7",
+  strategist: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
+  keeper: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
+  beefyFeeRecipient: "0x4387FcdF7399BDEb61A98DD2bb2382B870fa04Ab",
+  beefyFeeConfig: "0x1c80B9b421a699023238174308f0373E3328C5ae",
+  outputToNativeRoute: ["0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"],
+  outputToLp0Route: ["0xF26006408112be347c23FDBa03F7bC3566519655", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710", "0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A"],
+  outputToLp1Route: ["0xF26006408112be347c23FDBa03F7bC3566519655", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"],
   ensId,
   shouldSetPendingRewardsFunctionName: true,
   pendingRewardsFunctionName: "pendingCake", // used for rewardsAvailable(), use correct function name from masterchef
