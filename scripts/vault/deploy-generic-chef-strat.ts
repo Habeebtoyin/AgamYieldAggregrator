@@ -22,11 +22,20 @@ const shouldVerifyOnEtherscan = false;
 const want = web3.utils.toChecksumAddress("0x6DbE46854723c439c8a5Dc8D6d08e7df685Dcd9d");
 const ensId = ethers.utils.formatBytes32String("cake.eth");
 
+
+/**
+ *   outputToNativeRoute: [CAKE, WBNB],
+  outputToLp0Route: [CAKE, BUSD, WOM],
+  outputToLp1Route: [CAKE, BUSD],
+ */
 const vaultParams = {
-  mooName: "Moo CakeV2 WOM-BUSD",
-  mooSymbol: "mooCakeV2WOM-BUSD",
+  mooName: "Moo BriseCakeV2 agam-brise",
+  mooSymbol: "mooBriseCakeV2agamBrise",
   delay: 21600,
 };
+const agam="0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A"
+const wbrise="0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"
+const briseswapLptoken="0xF26006408112be347c23FDBa03F7bC3566519655"
 
 const strategyParams = {
   want: want,
@@ -37,9 +46,9 @@ const strategyParams = {
   keeper: "0xfb8370A4b1b0Ff62D11Ca07B2f0c8490Bf0Fc7D8",
   beefyFeeRecipient: "0x4387FcdF7399BDEb61A98DD2bb2382B870fa04Ab",
   beefyFeeConfig: "0x1c80B9b421a699023238174308f0373E3328C5ae",
-  outputToNativeRoute: ["0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"],
-  outputToLp0Route: ["0xF26006408112be347c23FDBa03F7bC3566519655", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710", "0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A"],
-  outputToLp1Route: ["0xF26006408112be347c23FDBa03F7bC3566519655", "0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"],
+  outputToNativeRoute: [briseswapLptoken, wbrise],
+  outputToLp0Route: [briseswapLptoken, wbrise, agam],
+  outputToLp1Route: [briseswapLptoken, wbrise],
   ensId,
   shouldSetPendingRewardsFunctionName: true,
   pendingRewardsFunctionName: "pendingCake", // used for rewardsAvailable(), use correct function name from masterchef
