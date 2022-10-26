@@ -48,7 +48,7 @@ const strategyParams = {
   beefyFeeConfig: "0x1c80B9b421a699023238174308f0373E3328C5ae",
   outputToNativeRoute: [briseswapLptoken, wbrise],
   outputToLp0Route: [briseswapLptoken, wbrise, agam],
-  outputToLp1Route: [briseswapLptoken, wbrise],
+  outputToLp1Route: [briseswapLptoken, agam],
   ensId,
   shouldSetPendingRewardsFunctionName: true,
   pendingRewardsFunctionName: "pendingCake", // used for rewardsAvailable(), use correct function name from masterchef
