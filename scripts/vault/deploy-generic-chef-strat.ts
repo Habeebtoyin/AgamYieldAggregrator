@@ -37,6 +37,9 @@ const agam="0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A"
 const wbrise="0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710"
 const briseswapLptoken="0xF26006408112be347c23FDBa03F7bC3566519655"
 
+//token0=0x0eb9036cbE0f052386f36170c6b07eF0a0E3f710
+//token1=0xE8930F26A176dc1320eD0Ee423AFe09e378C2e6A
+
 const strategyParams = {
   want: want,
   poolId: 0,
@@ -47,7 +50,7 @@ const strategyParams = {
   beefyFeeRecipient: "0x4387FcdF7399BDEb61A98DD2bb2382B870fa04Ab",
   beefyFeeConfig: "0x1c80B9b421a699023238174308f0373E3328C5ae",
   outputToNativeRoute: [briseswapLptoken, wbrise],
-  outputToLp0Route: [briseswapLptoken, wbrise, agam],
+  outputToLp0Route: [briseswapLptoken, agam,wbrise],
   outputToLp1Route: [briseswapLptoken, agam],
   ensId,
   shouldSetPendingRewardsFunctionName: true,
